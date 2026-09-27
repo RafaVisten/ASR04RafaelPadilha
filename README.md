@@ -4,18 +4,18 @@
 
 ### Experimento 1. server e cliente multi-threaded
 
-Tempo envio: 0:00:01.654887
-Tempo processamento e resposta: 0:00:09.925068
+* Tempo envio: 0:00:01.654887
+* Tempo processamento e resposta: 0:00:09.925068
 
 ### Experimento 2. server e cliente single-threaded
 
-Tempo envio: 0:00:00.326913
-Tempo processamento e resposta: 0:00:00.326851
+* Tempo envio: 0:00:00.326913
+* Tempo processamento e resposta: 0:00:00.326851
 
 ### Experimento 3. server multi-threaded, cliente single-threaded
 
-Tempo envio: 0:00:01.015265
-Tempo processamento e resposta: 0:00:05.172608
+* Tempo envio: 0:00:01.015265
+* Tempo processamento e resposta: 0:00:05.172608
 
 ### Interpretação
 
