@@ -1,3 +1,0 @@
-HOST = 'localhost'
-PORT = 5678
-MAX_REQUESTS = 1000
