@@ -15,8 +15,8 @@ Tempo processamento e resposta: 0:00:05.172608
 
 Interpretação:
 
-Para essa carga de trabalho, a implementação single-threaded apresentou o menor tempo, com aproximadamente 0,33 s, enquanto a versão com servidor multithreaded e
-cliente single-threaded aumentou o tempo para 1,02 s no cliente e 5,17 s no servidor, e finalmente a versão totalmente multithreaded apresentou 1,65 s no cliente e 
-9,93 s no servidor.
+Para essa carga de trabalho, a implementação single-threaded apresentou o menor tempo (~0,33 s),
+seguida pela versão com servidor multithreaded. Finalmente, a versão totalmente multithreaded teve o pior tempo.
 
-Isso indica que, neste experimento, o overhead de criação e gerenciamento das threads e das conexões foi maior que o benefício do paralelismo, especialmente por se tratarem de operações simples e rápidas. Portanto, o uso de multithreading não resultou em ganho de desempenho para essa carga específica.
+Isso indica que, neste experimento, o overhead de criação e gerenciamento das threads é grande demais para as operações simples da calculadora. 
+Assim, o uso de paralelismo é desnecessário para essa carga de trabalho e não melhorou o desempenho do sistema.
