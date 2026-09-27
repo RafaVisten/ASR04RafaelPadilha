@@ -1,4 +1,4 @@
-# server single-threaded
+# experimento original (single-threaded)
 
 from socket  import *
 from constCS import * 

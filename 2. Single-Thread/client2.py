@@ -1,4 +1,4 @@
-# client single threaded
+# experimento original (single-threaded)
 
 from socket  import *
 from constCS import *
@@ -28,6 +28,6 @@ for i in range(MAX_REQUESTS):
 end = time.time()
 elapsed = end - start
 
-print("Tempo envio: "+str(timedelta(seconds=elapsed)))
+print("Tempo total cliente: "+str(timedelta(seconds=elapsed)))
     
 s.close()                                               # close the connection

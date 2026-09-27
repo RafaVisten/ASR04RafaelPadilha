@@ -1,10 +1,5 @@
-# server single-threaded
-
 from socket  import *
 from constCS import * 
-
-import time
-from datetime import timedelta
 
 s = socket(AF_INET, SOCK_STREAM) 
 s.bind((HOST, PORT))  
@@ -12,9 +7,7 @@ s.listen(1)
 
 (conn, addr) = s.accept()                       # returns new socket and addr. client 
 
-start = time.time()
-
-for i in range(MAX_REQUESTS):
+while True:
 
   data = conn.recv(1024)                        # receive data from client
   if not data: break                            # stop if client stopped
@@ -36,10 +29,5 @@ for i in range(MAX_REQUESTS):
   print("answer provided: "+str(ans))
 
   conn.send(str.encode(str(ans)))               # return answer
-
-end = time.time()
-elapsed = end - start
-
-print("Tempo processamento e resposta: "+str(timedelta(seconds=elapsed)))
 
 conn.close()                                    # close the connection
