@@ -1,8 +1,26 @@
 # ClientServerBasics (2.0)
 
-## Tutorial de uso
+## Relatório experimental
 
-* rodar lado a lado server.py e client.py, respectivamente;
-* fornecer expressão à client.py. sintaxe: `int int add/sub/mult/div`, exemplo: `4 4 add`;
-* server.py mostrará a string `"answer provided: "+str(ans)"` e retornara `ans` para o cliente. em caso de erro de sintaxe, `ans` receberá `"faulty expression. try again"`;
-* o cliente mostrará `ans`, exemplo: 8.
+### Experimento 1. server e cliente multi-threaded
+
+Tempo envio: 0:00:01.654887
+Tempo processamento e resposta: 0:00:09.925068
+
+### Experimento 2. server e cliente single-threaded
+
+Tempo envio: 0:00:00.326913
+Tempo processamento e resposta: 0:00:00.326851
+
+### Experimento 3. server multi-threaded, cliente single-threaded
+
+Tempo envio: 0:00:01.015265
+Tempo processamento e resposta: 0:00:05.172608
+
+### Interpretação
+
+Para essa carga de trabalho, a implementação single-threaded apresentou o menor tempo (~0,33 s),
+seguida pela versão com servidor multithreaded. Finalmente, a versão totalmente multithreaded teve o pior tempo.
+
+Isso indica que, neste experimento, o overhead de criação e gerenciamento das threads é grande demais para as operações simples da calculadora. 
+Assim, o uso de paralelismo é desnecessário para essa carga de trabalho e não melhorou o desempenho do sistema.
